@@ -1,0 +1,22 @@
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/error-pages/error-404-background.png");
+  background-position: center center;
+  background-size: cover;
+
+
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 12rem;
+    text-shadow: -0.5rem -0.5rem 1rem #1d1d1d;
+  }
+
+  h2 {
+    text-shadow: -0.3rem -0.3rem 1rem #1d1d1d;
+  }
+}

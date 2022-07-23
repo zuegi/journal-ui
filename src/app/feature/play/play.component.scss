@@ -1,0 +1,21 @@
+
+.detail {
+  padding: 0 1rem 1rem 1rem;
+
+  .titel {
+    text-align: center;
+    width: 100%;
+  }
+
+  .beschreibung {
+    float: left;
+    width: 74%;
+    margin: 5px;
+  }
+
+  .applicationChoice {
+    float: right;
+    width: 24%;
+    margin: 5px;
+  }
+}

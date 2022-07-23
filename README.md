@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Commands used to create
+Immer aus dem root des Projekts
+* ng g m feature/application --route application --module app.module
+* ng g cl feature/application/application
+* ng g c feature/application/application-details
+* ng generate service feature/application/application
+
+
+
+## Referenzen
+[Module routing](https://angular.io/guide/lazy-loading-ngmodules#step-by-step)
+
