@@ -13,6 +13,7 @@ import {ListboxModule} from 'primeng/listbox';
 import {DropdownModule} from 'primeng/dropdown';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ApplicationModule} from './feature/application/application.module';
+import {MainModule} from './feature/main/main.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {ApplicationModule} from './feature/application/application.module';
     CalendarModule,
     ListboxModule,
     DropdownModule,
-    ApplicationModule
+    ApplicationModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,9 +4,10 @@ import {PlayComponent} from './feature/play/play.component';
 import {ErrorPage404Component} from './error/error-page404/error-page404.component';
 
 const routes: Routes = [
-  {path: 'play', component: PlayComponent},
   { path: 'application', loadChildren: () => import('./feature/application/application.module').then(m => m.ApplicationModule) },
-  {path: '', redirectTo: '/play', pathMatch: 'full'},
+  { path: 'main', loadChildren: () => import('./feature/main/main.module').then(m => m.MainModule) },
+  {path: 'play', component: PlayComponent}, // FIXME to be removed - playground
+  {path: '', redirectTo: '/main', pathMatch: 'full'},
   {path: '**', component: ErrorPage404Component }
 ];
 

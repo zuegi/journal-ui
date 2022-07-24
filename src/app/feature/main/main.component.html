@@ -1,0 +1,35 @@
+<div class="main-search">
+  <div class="ueberschrift">
+    <h1>Journal</h1>
+  </div>
+<!--  <div class="input-group">-->
+<!--  <div class="p-mr-2 p-input input-group">-->
+<!--    <div class="p-inputgroup">-->
+<!--      <span class="p-inputgroup-addon">-->
+<!--        <i class="pi pi-search"></i>-->
+<!--      </span>-->
+<!--      <p-autoComplete id="main-input-id"-->
+<!--                      [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}"-->
+<!--                      [(ngModel)]="selectedResult" [suggestions]="results"-->
+<!--                      (completeMethod)="search({event : $event})"-->
+<!--                      field="name">-->
+<!--      </p-autoComplete>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  </div>-->
+
+  <div class="input-wrapper">
+    <i class="pi pi-search"></i>
+    <p-autoComplete id="input-id"
+                    [style]="{'width':'90%','background-color':'red','border': '0','margin':'0 0.5rem 0 0.5rem','box-shadow':'0','outline':'none'}"
+                    [inputStyle]="{'width':'90%A','background-color':'red','border': '0','margin':'0 0.5rem 0 0.5rem','box-shadow':'0','outline':'none'}"
+                    [(ngModel)]="selectedResult" [suggestions]="results"
+                    (completeMethod)="search({event : $event})"
+                    field="name"
+                    placeholder="Suche">
+    </p-autoComplete>
+  </div>
+  <div class="main-button">
+    <button type="button" pButton label="Neuer Eintrag" (click)="createJournalEntry()"></button>
+  </div>
+</div>

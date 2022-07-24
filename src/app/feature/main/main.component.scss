@@ -1,0 +1,45 @@
+.main-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+
+  .input-group {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+  }
+
+  #main-input-id {
+    display: flex;
+    width: 540px;
+
+  }
+
+  p-autoComplete {
+    width: 100%;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 540px;
+    background-color: red;
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4.5rem;
+  }
+
+  .ueberschrift {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+}
