@@ -1,0 +1,48 @@
+
+.search-container {
+
+  display: flex;
+  width: 540px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FCFCFC; // fast weiss
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4.5rem;
+  border: 0.1em solid #D3D3D3;
+
+
+  #autocomplete-span {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+
+  // ist der style für die Anzeige der such
+  .search-panel-style{
+    //  border:none;
+    //  box-shadow: none;#
+    background-color: #F1F0F0; // fast weiss
+  }
+
+  .search-style {
+    // nothing to to do
+  }
+
+  .search-input-style {
+    border:0 none;
+  }
+
+  .search-input-style:focus {
+    border:none;
+    box-shadow: none;
+  }
+}
+
+.search-container:hover {
+  background-color: #F1F0F0;
+}
+.search-container:hover .search-input-style{
+  background-color: inherit;
+  transition: none;
+}

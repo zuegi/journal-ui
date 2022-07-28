@@ -29,17 +29,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Commands used to create
 Immer aus dem root des Projekts
+Module
 ```shell
 ng g m feature/application --route application --module app.module
 ```
+Class
 ```shell
 ng g cl feature/application/application
 ```
-
+Compoent
 ```shell
 ng g c feature/application/application-details
 ```
 
+Service
 ```shell
 ng generate service feature/application/application
 ```

@@ -1,0 +1,14 @@
+<div class="search-container">
+  <i class="pi pi-search" style="padding-right: 5px;"></i>
+  <span id="autocomplete-span" class="p-fluid">
+    <p-autoComplete
+      styleClass="search-style"
+      inputStyleClass="search-input-style"
+      panelStyleClass="search-panel-style"
+      [(ngModel)]="selectedResult" [suggestions]="results"
+      (completeMethod)="search({event : $event})"
+      field="name"
+      placeholder="Suche">
+    </p-autoComplete>
+    </span>
+</div>

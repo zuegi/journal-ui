@@ -25,12 +25,10 @@ export class MainlookupService {
     //in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
     let filtered: string[] = [];
     // let query = event.query;
-    console.log('Query: ' + query);
     // @ts-ignore
     for (let i = 0; i < this.countries.length; i++) {
       // @ts-ignore
       let country = this.countries[i];
-      console.log('country.name: ' + country);
       if (country.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
         filtered.push(country as string);
       }

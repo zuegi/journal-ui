@@ -8,11 +8,13 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {HttpClientModule} from '@angular/common/http';
+import { MainSearchComponent } from './main-search/main-search.component';
 
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    MainSearchComponent
   ],
     imports: [
         CommonModule,
