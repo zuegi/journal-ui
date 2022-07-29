@@ -12,10 +12,13 @@ import { MainSearchComponent } from './main-search/main-search.component';
 
 
 @NgModule({
-  declarations: [
-    MainComponent,
-    MainSearchComponent
-  ],
+    declarations: [
+        MainComponent,
+        MainSearchComponent
+    ],
+    exports: [
+        MainComponent
+    ],
     imports: [
         CommonModule,
         MainRoutingModule,

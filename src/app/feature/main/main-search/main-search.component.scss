@@ -5,12 +5,10 @@
   width: 540px;
   align-items: center;
   justify-content: space-between;
-  background-color: #FCFCFC; // fast weiss
   margin: 0 0.5rem 0 0.5rem;
   padding: 0.5rem;
-  border-radius: 4.5rem;
-  border: 0.1em solid #D3D3D3;
-
+  border-radius: 3.5rem;
+  border: 0.1em solid var(--surface-500);
 
   #autocomplete-span {
     width: 100%;
@@ -20,9 +18,8 @@
 
   // ist der style für die Anzeige der such
   .search-panel-style{
-    //  border:none;
-    //  box-shadow: none;#
-    background-color: #F1F0F0; // fast weiss
+    border-radius: 1.5rem;
+    width: 100%;
   }
 
   .search-style {
@@ -31,6 +28,7 @@
 
   .search-input-style {
     border:0 none;
+    background-color: inherit;
   }
 
   .search-input-style:focus {
@@ -40,7 +38,8 @@
 }
 
 .search-container:hover {
-  background-color: #F1F0F0;
+  //background-color: #F1F0F0;
+  background-color: var(--surface-50);
 }
 .search-container:hover .search-input-style{
   background-color: inherit;

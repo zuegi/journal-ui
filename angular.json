@@ -30,8 +30,37 @@
             "styles": [
               "src/styles.scss",
               "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              {
+                "input": "src/assets/themes/theme-saga-blue.scss",
+                "bundleName": "saga-blue",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes/theme-bootstrap4-dark-blue.scss",
+                "bundleName": "bootstrap4-dark-blue",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes/theme-bootstrap4-light-blue.scss",
+                "bundleName": "bootstrap4-light-blue",
+                "inject": false
+              },
+              {
+              "input": "src/assets/themes/theme-mdc-dark-indigo.scss",
+              "bundleName": "mdc-dark-indigo",
+              "inject": false
+              },
+              {
+                "input": "src/assets/themes/theme-lara-light-teal.scss",
+                "bundleName": "lara-light-teal",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes/theme-lara-dark-teal.scss",
+                "bundleName": "lara-dark-teal",
+                "inject": false
+              }
             ],
             "scripts": []
           },
