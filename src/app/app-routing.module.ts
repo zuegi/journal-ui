@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'main', loadChildren: () => import('./feature/main/main.module').then(m => m.MainModule) },
   {path: 'play', component: PlayComponent}, // FIXME to be removed - playground
   {path: '', redirectTo: '/main', pathMatch: 'full'},
+  { path: 'journal', loadChildren: () => import('./feature/journal/journal.module').then(m => m.JournalModule) },
   {path: '**', component: ErrorPage404Component }
 ];
 

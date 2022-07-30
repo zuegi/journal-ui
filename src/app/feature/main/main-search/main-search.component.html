@@ -7,6 +7,7 @@
       panelStyleClass="search-panel-style"
       [(ngModel)]="selectedResult" [suggestions]="results"
       (completeMethod)="search({event : $event})"
+      (onSelect)="onSelect($event)"
       field="name"
       placeholder="Suche">
     </p-autoComplete>
