@@ -10,9 +10,7 @@ export class ThemeService {
 
   switchTheme(theme: string) {
     let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
-    console.log("ThemeLink: " + themeLink);
     if (themeLink) {
-      console.log("Theme for ThemeLink: " + theme);
       themeLink.href = theme + '.css';
     }
   }

@@ -35,7 +35,6 @@ export class PlayComponent {
   }
 
   changeTheme(theme: string) {
-    console.log('Theme: ' + theme);
     this.themeService.switchTheme(theme);
 
   }

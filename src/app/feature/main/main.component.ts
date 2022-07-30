@@ -28,6 +28,5 @@ export class MainComponent implements OnInit {
 
   onSearchQuery(query: string) {
     this.searchQuery = query;
-    console.log("MainComponent.searchQueery: " + this.searchQuery);
   }
 }

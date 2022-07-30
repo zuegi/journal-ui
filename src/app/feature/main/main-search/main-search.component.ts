@@ -28,21 +28,19 @@ export class MainSearchComponent implements OnInit {
 
   search({event}: { event: any }) {
     this.results = this.lookupService.getResults(event.query);
-    console.log("searchQuery: " + this.searchQuery);
     this.query = event.query;
     this.searchQuery.emit(event.query);
   }
 
   // FIXME Country ersetzen durch Suchresultat
   onSelect(country: Country) {
-    console.log("country: " + country.name);
     // passing data to route
     this.router.navigateByUrl('journal', {state: {code:country.code, name:country.name}})
   }
 
   onKeyUp(event: any) {
+    // keyCode 13 = enter
     if (event.keyCode == 13) {
-      console.log("onKeyUp: " + event.keyCode +" - " +event.query);
       this.router.navigateByUrl("/journal/new", {state: {query: this.query}})
     }
   }
