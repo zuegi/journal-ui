@@ -18,7 +18,7 @@ export class MainComponent implements OnInit {
   }
 
   createJournalEntry() {
-    this.router.navigateByUrl("/application/new")
+    this.router.navigateByUrl("/journal/new")
   }
 
   search({event}: { event: any }) {
