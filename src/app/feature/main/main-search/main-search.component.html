@@ -1,6 +1,6 @@
 <div class="search-container">
   <i class="pi pi-search" style="padding-right: 5px;"></i>
-  <span id="autocomplete-span" class="p-fluid">
+  <div id="autocomplete-span" class="p-fluid">
     <p-autoComplete
       styleClass="search-style"
       inputStyleClass="search-input-style"
@@ -9,7 +9,16 @@
       (completeMethod)="search({event : $event})"
       (onSelect)="onSelect($event)"
       field="name"
+      [showClear]="true"
       placeholder="Suche">
+      <ng-template let-selectedResult pTemplate="item">
+        <div class="card">
+          <div class="flex card-container blue-container overflow-hidden">
+            <i class="pi pi-search" style="padding-right: 5px;"></i>
+            <div style="font-size:18px;float:left">{{selectedResult.name}}</div>
+          </div>
+        </div>
+      </ng-template>
     </p-autoComplete>
-    </span>
+  </div>
 </div>
