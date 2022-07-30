@@ -17,7 +17,8 @@ import { MainSearchComponent } from './main-search/main-search.component';
         MainSearchComponent
     ],
     exports: [
-        MainComponent
+        MainComponent,
+        MainSearchComponent
     ],
     imports: [
         CommonModule,

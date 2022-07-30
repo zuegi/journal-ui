@@ -11,6 +11,7 @@ import {MainlookupService} from './mainlookup.service';
 export class MainComponent implements OnInit {
   selectedResult?: string;
   results: string[] = [];
+  searchQuery?: string;
 
   constructor(private router: Router, private lookupService: MainlookupService) { }
 
@@ -18,10 +19,15 @@ export class MainComponent implements OnInit {
   }
 
   createJournalEntry() {
-    this.router.navigateByUrl("/journal/new")
+    this.router.navigateByUrl("/journal/new", {state: {query: this.searchQuery}})
   }
 
   search({event}: { event: any }) {
     this.results = this.lookupService.getResults(event.query);
+  }
+
+  onSearchQuery(query: string) {
+    this.searchQuery = query;
+    console.log("MainComponent.searchQueery: " + this.searchQuery);
   }
 }

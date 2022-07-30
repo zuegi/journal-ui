@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { JournalRoutingModule } from './journal-routing.module';
 import { JournalComponent } from './journal.component';
 import { JournalNewComponent } from './journal-new/journal-new.component';
+import {MainModule} from '../main/main.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { JournalNewComponent } from './journal-new/journal-new.component';
   ],
   imports: [
     CommonModule,
-    JournalRoutingModule
+    JournalRoutingModule,
+    MainModule
   ]
 })
 export class JournalModule { }

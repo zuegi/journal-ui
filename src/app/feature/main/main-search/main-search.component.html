@@ -8,6 +8,7 @@
       [(ngModel)]="selectedResult" [suggestions]="results"
       (completeMethod)="search({event : $event})"
       (onSelect)="onSelect($event)"
+      (onKeyUp)="onKeyUp($event)"
       field="name"
       [showClear]="true"
       placeholder="Suche">

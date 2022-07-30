@@ -3,9 +3,8 @@
     <h1>Journal</h1>
   </div>
 
-  <app-main-search class="app-main-search"></app-main-search>
-
+  <app-main-search (searchQuery)="onSearchQuery($event)" class="app-main-search"></app-main-search>
   <div class="main-button">
-    <button type="button" pButton label="Neuer Eintrag" (click)="createJournalEntry()"></button>
+    <button (click)="createJournalEntry()" label="Neuer Eintrag" pButton type="button"></button>
   </div>
 </div>
