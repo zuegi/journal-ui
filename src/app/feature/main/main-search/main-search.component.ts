@@ -44,4 +44,8 @@ export class MainSearchComponent implements OnInit {
       this.router.navigateByUrl("/journal/new", {state: {query: this.query}})
     }
   }
+
+  settings() {
+    this.router.navigateByUrl('settings');
+  }
 }

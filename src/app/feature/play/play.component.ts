@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {Application} from '../application/application';
-import {ThemeService} from '../../core/theme/theme.service';
 
 
 @Component({
@@ -22,7 +21,7 @@ export class PlayComponent {
   selectedApplication?: Application;
 
 
-  constructor(private formBuilder: FormBuilder, private themeService: ThemeService) {
+  constructor(private formBuilder: FormBuilder) {
     this.applications = [
       {uid: 'nemos-0', name: 'Nemos3000'},
       {uid: 'cm-service-1', name: 'CMService'},
@@ -32,10 +31,5 @@ export class PlayComponent {
 
   upper() {
     this.text = this.text?.toUpperCase();
-  }
-
-  changeTheme(theme: string) {
-    this.themeService.switchTheme(theme);
-
   }
 }

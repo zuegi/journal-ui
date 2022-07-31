@@ -14,27 +14,29 @@ import {DropdownModule} from 'primeng/dropdown';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ApplicationModule} from './feature/application/application.module';
 import {MainModule} from './feature/main/main.module';
+import {SettingsModule} from './feature/settings/settings.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ButtonModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    InputTextModule,
-    InputTextareaModule,
-    CalendarModule,
-    ListboxModule,
-    DropdownModule,
-    ApplicationModule,
-    MainModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ButtonModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
+        InputTextModule,
+        InputTextareaModule,
+        CalendarModule,
+        ListboxModule,
+        DropdownModule,
+        ApplicationModule,
+        MainModule,
+        SettingsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
