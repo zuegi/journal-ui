@@ -1,8 +1,6 @@
-
-
 <div>
   <h5>Row Editing</h5>
-  <p-table [value]="applications" dataKey="id" editMode="row" responsiveLayout="scroll">
+  <p-table #dt [value]="applications" dataKey="id" editMode="row" responsiveLayout="scroll">
     <ng-template pTemplate="header">
       <tr>
         <th>UID</th>
@@ -41,3 +39,10 @@
     </ng-template>
   </p-table>
 </div>
+<br/>
+<button pButton type="button" icon="pi pi-plus" class="ui-button-info" [label]="'Add'"
+        appAddRow [table]="dt" [newRow]="newRow()">
+</button>
+<br/>
+<br/>
+<button (click)="backToSettings()" label="Back to Settings" pButton type="button"></button>

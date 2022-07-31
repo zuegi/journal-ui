@@ -3,19 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { ApplicationRoutingModule } from './application-routing.module';
 import { ApplicationComponent } from './application.component';
-import { ApplicationNewComponent } from './application-new/application-new.component';
-import { ApplicationDetailsComponent } from './application-details/application-details.component';
 import {TableModule} from 'primeng/table';
 import {FormsModule} from '@angular/forms';
 import {ButtonModule} from 'primeng/button';
 import {RippleModule} from 'primeng/ripple';
+import { AddRowDirective } from './add-row.directive';
 
 
 @NgModule({
   declarations: [
     ApplicationComponent,
-    ApplicationNewComponent,
-    ApplicationDetailsComponent
+    AddRowDirective,
+  ],
+  exports: [
+    ApplicationComponent
   ],
   imports: [
     CommonModule,

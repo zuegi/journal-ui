@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Application} from './application';
 import {ApplicationService} from './service/application.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-application',
@@ -12,7 +13,7 @@ export class ApplicationComponent implements OnInit {
   applications: Application[];
   clonedApplications: { [s: string]: Application; } = {};
 
-  constructor(private applicationService: ApplicationService) {
+  constructor(private applicationService: ApplicationService, private router: Router) {
     this.applications = this.applicationService.getApplications();
   }
 
@@ -31,4 +32,11 @@ export class ApplicationComponent implements OnInit {
   }
 
 
+  backToSettings() {
+    this.router.navigateByUrl('settings')
+  }
+
+  newRow() {
+    return { uid: '', name: '' }
+  }
 }
