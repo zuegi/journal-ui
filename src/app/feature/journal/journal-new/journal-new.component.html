@@ -1,2 +1,23 @@
-<p>journal-new works!</p>
-<h2> {{query?.query | json }}</h2>
+<h1>Erstelle einen Titel</h1>
+
+<p-divider>{{currentDate}}</p-divider>
+
+<div>
+    <span class="p-float-label">
+            <input type="text" id="inputtext" pInputText [(ngModel)]="queryString">
+            <label [hidden]="showLabel" for="inputtext">Erstelle einen Titel</label>
+    </span>
+</div>
+
+<p-dropdown [options]="applications" [(ngModel)]="selectedApplication" optionLabel="name" placeholder="Waehle eine Applikation">
+</p-dropdown>
+
+<p>selectedApplication: {{selectedApplication?.name}}</p>
+
+
+<p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
+
+<p>Value: {{text||'empty'}}</p>
+<br/>
+<button (click)="main()" label="Abbrechen" pButton type="button"></button>
+<button (click)="main()" label="Sichern" pButton type="button"></button>

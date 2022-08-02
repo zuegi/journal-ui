@@ -32,6 +32,8 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/primeflex/primeflex.css",
+              "node_modules/quill/dist/quill.core.css",
+              "node_modules/quill/dist/quill.snow.css",
               {
                 "input": "src/assets/themes/theme-saga-blue.scss",
                 "bundleName": "saga-blue",
@@ -63,7 +65,9 @@
                 "inject": false
               }
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/quill/dist/quill.js"
+            ]
           },
           "configurations": {
             "production": {
