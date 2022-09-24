@@ -1,23 +1,39 @@
-<h1>Erstelle einen Titel</h1>
-
-<p-divider>{{currentDate}}</p-divider>
-
 <div>
-    <span class="p-float-label">
-            <input type="text" id="inputtext" pInputText [(ngModel)]="queryString">
-            <label [hidden]="showLabel" for="inputtext">Erstelle einen Titel</label>
-    </span>
+  <div class="grid">
+    <div class="col-12">
+      <div class="grid">
+        <div class="col-6">
+          <div class="card">
+            <div class="field">
+              Irgend ein Platzhalter zur Zeit
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <p></p>
+          <p-dropdown [options]="applications" [(ngModel)]="selectedApplication" optionLabel="name"
+                      placeholder="Waehle eine Applikation">
+          </p-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Editor</h2>
+
+  <div class="card">
+    <div class="field">
+      <p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
+    </div>
+    <div class=col-2>
+      <div class="grid">
+        <div class="col-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>To Be Deleted: Value: {{text}}</p>
+  <br/>
+  <button (click)="main()" label="Abbrechen" pButton type="button"></button>
+  <button (click)="main()" label="Sichern" pButton type="button"></button>
 </div>
-
-<p-dropdown [options]="applications" [(ngModel)]="selectedApplication" optionLabel="name" placeholder="Waehle eine Applikation">
-</p-dropdown>
-
-<p>selectedApplication: {{selectedApplication?.name}}</p>
-
-
-<p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
-
-<p>Value: {{text||'empty'}}</p>
-<br/>
-<button (click)="main()" label="Abbrechen" pButton type="button"></button>
-<button (click)="main()" label="Sichern" pButton type="button"></button>
