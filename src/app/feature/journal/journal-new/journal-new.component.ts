@@ -33,7 +33,7 @@ export class JournalNewComponent implements OnInit,DoCheck {
   ngOnInit(): void {
     this.query=history.state;
     this.queryString = this.query?.query;
-    console.log("queryString: " + this.queryString);
+    // console.log("queryString: " + this.queryString);
     if (this.queryString != null) {
       this.showLabel = true;
       this.text = '<h1>' + this.queryString + '</h1>';
@@ -61,6 +61,6 @@ export class JournalNewComponent implements OnInit,DoCheck {
 
   clickedSpeicherOrt(event: any) {
 
-    console.log("speicherort: " + event.item.label);
+    // console.log("speicherort: " + event.item.label);
   }
 }

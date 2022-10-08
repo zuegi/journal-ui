@@ -21,7 +21,7 @@ export class JournalService {
   }
 
   getResults(query: string) {
-    console.log("journal.service.getResults().query: " + query);
+    // console.log("journal.service.getResults().query: " + query);
     // console.log("journal.service.getResults().journalEntries: " + this.journalEntries);
     //in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
     let filtered: string[] = [];
@@ -31,11 +31,11 @@ export class JournalService {
       let journalEntry = this.journalEntries[i];
       // console.log("journalEntry.titel: " + journalEntry.titel.toLowerCase());
       if (journalEntry.titel.toLowerCase().includes(query.toLowerCase())) {
-        console.log("Found entry: " +journalEntry.titel)
+        // console.log("Found entry: " +journalEntry.titel)
         filtered.push(journalEntry);
       }
     }
-    console.log("journal.service.getResults.filtered: " + filtered.length);
+    // console.log("journal.service.getResults.filtered: " + filtered.length);
     return filtered;
   }
 }

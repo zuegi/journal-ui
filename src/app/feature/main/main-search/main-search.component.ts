@@ -30,9 +30,9 @@ export class MainSearchComponent implements OnInit {
 
   search({event}: { event: any }) {
     // this.results = this.lookupService.getResults(event.query);
-    console.log("event.query: " + event.query);
+    // console.log("event.query: " + event.query);
     this.results = this.journalService.getResults(event.query);
-    console.log("results: " + this.results.toString());
+    // console.log("results: " + this.results.toString());
     this.query = event.query;
     this.searchQuery.emit(event.query);
   }
