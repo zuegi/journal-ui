@@ -11,6 +11,7 @@ import {DividerModule} from 'primeng/divider';
 import {DropdownModule} from 'primeng/dropdown';
 import {EditorModule} from 'primeng/editor';
 import {InputTextModule} from 'primeng/inputtext';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
 
 
 @NgModule({
@@ -18,16 +19,17 @@ import {InputTextModule} from 'primeng/inputtext';
     JournalComponent,
     JournalNewComponent
   ],
-  imports: [
-    CommonModule,
-    JournalRoutingModule,
-    MainModule,
-    FormsModule,
-    ButtonModule,
-    DividerModule,
-    DropdownModule,
-    EditorModule,
-    InputTextModule
-  ]
+    imports: [
+        CommonModule,
+        JournalRoutingModule,
+        MainModule,
+        FormsModule,
+        ButtonModule,
+        DividerModule,
+        DropdownModule,
+        EditorModule,
+        InputTextModule,
+        BreadcrumbModule
+    ]
 })
 export class JournalModule { }
