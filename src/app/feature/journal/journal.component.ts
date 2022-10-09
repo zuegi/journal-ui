@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {JournalEntry} from './JournalEntry';
 
 interface Country {
   name:string,
@@ -12,7 +13,7 @@ interface Country {
 })
 export class JournalComponent implements OnInit {
 
-  product?: Country;
+  product?: JournalEntry;
 
   constructor() {
   }

@@ -1,6 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Router} from '@angular/router';
-import {MainlookupService} from './mainlookup.service';
 import {JournalService} from '../journal/service/journal.service';
 
 @Component({
@@ -14,7 +13,7 @@ export class MainComponent implements OnInit {
   results: string[] = [];
   searchQuery?: string;
 
-  constructor(private router: Router, private lookupService: MainlookupService,
+  constructor(private router: Router,
               private journalService: JournalService) { }
 
   ngOnInit(): void {
@@ -26,7 +25,6 @@ export class MainComponent implements OnInit {
 
   search({event}: { event: any }) {
     // console.log("main.component.search.event.query: " + event.query);
-    // this.results = this.lookupService.getResults(event.query);
     this.results = this.journalService.getResults(event.query);
   }
 

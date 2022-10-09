@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output, ViewEncapsulation} from '@angul
 import {MainlookupService} from '../mainlookup.service';
 import {Router} from '@angular/router';
 import {JournalService} from '../../journal/service/journal.service';
+import {JournalEntry} from '../../journal/JournalEntry';
 
 // FIXME Country ersetzen durch Suchresultat
 interface Country {
@@ -38,9 +39,10 @@ export class MainSearchComponent implements OnInit {
   }
 
   // FIXME Country ersetzen durch Suchresultat
-  onSelect(country: Country) {
+  onSelect(journalEntry: JournalEntry) {
     // passing data to route
-    this.router.navigateByUrl('journal', {state: {code:country.code, name:country.name}})
+    // this.router.navigateByUrl('journal', {state: {code:country.code, name:country.name}})
+    this.router.navigateByUrl('journal', {state: journalEntry})
   }
 
   onKeyUp(event: any) {
